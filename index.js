@@ -36,6 +36,7 @@ Toolkit.run(async (tools) => {
 
   console.log(`Current version is ${version} and tag ${tag}`);
 
-  await runCommand(`git tag -a ${tag} -m "Version ${ve}"`);
+  await runCommand(`npm publish`);
+  await runCommand(`git tag -a ${tag} -m "Version ${version}"`);
   await runCommand(`git push origin ${tag}`);
 });
